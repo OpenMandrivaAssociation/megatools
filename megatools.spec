@@ -1,3 +1,5 @@
+%define libname %mklibname mega 0
+
 Name:		megatools
 Version:	1.9.95
 Release:	1
@@ -31,13 +33,15 @@ true control of your encryption keys.
 Mega website can be found at http://mega.co.nz.
 
 %package devel
+Requires:	%libname = %{version}-%{release}
 
+%package -n %libname
 
 %prep
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --disable-static --enable-introspection=no
 %make
 
 %install
@@ -50,13 +54,16 @@ rm -rf %{buildroot}
 #docs attr(-,root,root) README HACKING HOWTO LICENSE
 %defattr(-,root,root)
 %{_bindir}/mega*
-%{_libdir}/libmega*
 %{_mandir}/man1/mega*
 %{_mandir}/man5/mega*
 %{_mandir}/man7/mega*
 %{_docdir}/%{name}/*
 
+%files -n %libname
+%{_libdir}/libmega.so.*
+
 %files devel
 %defattr(-,root,root)
 %{_includedir}/mega/*
+%{_libdir}/libmega.so
 %{_libdir}/pkgconfig/libmega*
