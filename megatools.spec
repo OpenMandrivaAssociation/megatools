@@ -9,7 +9,9 @@ Source:		%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(fuse)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(libcurl)
-
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gio-2.0)
+BuildRequires:	pkgconfig(gobject-2.0)
 
 %description
 Megatools is a collection of programs for accessing Mega service from.
