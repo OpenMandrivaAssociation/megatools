@@ -51,7 +51,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/mega*
 %{_libdir}/libmega*
-%{_datadir}/gjs-1.0/mega.*
 %{_mandir}/man1/mega*
 %{_mandir}/man5/mega*
 %{_mandir}/man7/mega*
