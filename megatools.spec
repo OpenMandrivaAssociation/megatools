@@ -1,5 +1,5 @@
 Name:		megatools
-Version:	1.9.92
+Version:	1.9.95
 Release:	1
 License:	GPLv2
 Summary:	megatools - command line client application for Mega
@@ -35,7 +35,7 @@ Mega website can be found at http://mega.co.nz.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
