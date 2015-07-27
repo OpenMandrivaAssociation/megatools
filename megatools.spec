@@ -14,6 +14,7 @@ BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(gobject-2.0)
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 
 %description
 Megatools is a collection of programs for accessing Mega service from.
@@ -41,7 +42,7 @@ Requires:	%libname = %{version}-%{release}
 %setup -q
 
 %build
-%configure2_5x --disable-static --enable-introspection=no
+%configure --enable-introspection=no
 %make
 
 %install
