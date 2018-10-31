@@ -2,7 +2,7 @@
 
 Name:		megatools
 Version:	1.9.95
-Release:	1
+Release:	2
 License:	GPLv2
 Summary:	megatools - command line client application for Mega
 Group:		File tools
